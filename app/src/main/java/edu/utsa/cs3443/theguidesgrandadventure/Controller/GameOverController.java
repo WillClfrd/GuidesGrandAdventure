@@ -138,6 +138,9 @@ public class GameOverController implements View.OnClickListener{
             if(userInputBox.getText().length() >= nameLengthLimit){
                 Toast.makeText(activity, "Entered name is too long!", LENGTH_SHORT).show();
             }
+            else if(userInputBox.getText().length() == 0){
+                Toast.makeText(activity, "Entered name is too short!", LENGTH_SHORT).show();
+            }
             else{
                 Toast.makeText(activity, "Added to leaderboard!", LENGTH_SHORT).show();
                 if(checkForHighScore() == 99){
